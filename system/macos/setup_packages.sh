@@ -48,6 +48,11 @@ print_title "Installing Brew Packages"
 brew_install "wget" "wget"
 brew_install "mas" "mas"
 brew_install "fd" "fd"
+brew_install "git" "git"
+brew_install "git" "git-lfs"
+brew_install "git" "git-delta"
+brew_install "lazygit" "lazygit"
+brew_install "git" "git-quick-stats"
 
 #==================================
 # Brew Install "fasd" "fasd" not working
@@ -80,18 +85,13 @@ if ! grep -q "fasd --init auto" "$HOME/.bashrc"; then
 fi
 
 # Reload shell config (non-blocking)
-source "$HOME/.zshrc" || source "$HOME/.bashrc"
+exec "$HOME/.zshrc" || exec "$HOME/.bashrc"
 
 print_result $? "Installed fasd"
 #==================================
 
 brew_install "fzf" "fzf"
 brew_install "dockutil" "dockutil"
-brew_install "git" "git"
-brew_install "git" "git-lfs"
-brew_install "git" "git-delta"
-brew_install "lazygit" "lazygit"
-brew_install "git" "git-quick-stats"
 brew_install "cloc" "cloc"
 brew_install "navi" "navi"
 brew_install "nano" "nano"
