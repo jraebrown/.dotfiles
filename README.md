@@ -122,7 +122,7 @@ If you want to create your own dotfiles based on my configuration, you should
 
 ## Credits
 
-This dotfiles repository is a fork of [exalth's dotfiles](https://github.com/excalith/.dotfiles) which was a (self-described) heavily ~~knocked-off~~ inspired version of beautiful [Cătălin’s dotfiles](https://github.com/alrra/dotfiles).
+This dotfiles repository is a fork of [eXxcalth's dotfiles](https://github.com/eXxcalith/.dotfiles) which was a (self-described) heavily ~~knocked-off~~ inspired version of beautiful [Cătălin’s dotfiles](https://github.com/alrra/dotfiles).
 
 I have modified this dotfiles with my own taste of config files and added a bunch of helpers and utilities to install packages, extensions etc. from different sources that I trust. I tried to seperate installation system and OS-spesific configurations as much as I can, so it would be easier to implement new OS setups which I might do later.
 
