@@ -132,6 +132,11 @@ brew_install "tldr" "tldr"
 brew_install "spotify_player" "spotify_player"
 brew_install "no-more-secrets" "no-more-secrets"
 brew_install "yabai" "koekeishiya/formulae/yabai"
+
+sudo yabai --install-service
+sudo launchctl kickstart -k system/yabai
+
+
 brew_install "skhd" "koekeishiya/formulae/skhd"
 brew_install "cmatrix" "cmatrix"
 brew_install "nudoku" "nudoku"
@@ -179,23 +184,12 @@ brew_install "FiraCode Nerd Font" "font-fira-code-nerd-font" "--cask"
 #==================================
 print_title "Installing Brew MAS"
 brew_mas_install "XCode", "497799835"
-brew_mas_install "1Password", "1333542190"
-brew_mas_install "Affinity Photo", "824183456"
-brew_mas_install "Affinity Designer", "824171161"
-brew_mas_install "Affinity Publisher", "881418622"
+#brew_mas_install "1Password", "1333542190"
+#brew_mas_install "Affinity Photo", "824183456"
+#brew_mas_install "Affinity Designer", "824171161"
+#brew_mas_install "Affinity Publisher", "881418622"
 brew_mas_install "Spark", "1176895641"
-brew_mas_install "Telegram", "747648890"
-brew_mas_install "Reeder 5", "1529448980"
-brew_mas_install "Fantastical", "975937182"
-brew_mas_install "Lungo", "1263070803"
-brew_mas_install "SnippetsLab", "1006087419"
-brew_mas_install "CARROT Weather", "993487541"
-brew_mas_install "Moom", "419330170"
-brew_mas_install "Displaperture", "1543920362"
-brew_mas_install "Gifski", "1351639930"
-brew_mas_install "Elmedia Player", "937759555"
 brew_mas_install "Friendly Streaming Browser", "553245401"
-brew_mas_install "iPreview", "1519213509"
 brew_mas_install "Craft", "1487937127"
 
 
@@ -218,6 +212,10 @@ yarn_install "Serve" "serve"
 # Install From Source
 #==================================
 print_title "Install Packages From Source"
+
+mkdir -p ~/.config/pip
+echo "[global]" >> ~/.config/pip/pip.conf
+echo "break-system-packages = true" >> ~/.config/pip/pip.conf
 
 # LunarVim
 LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh) -y
