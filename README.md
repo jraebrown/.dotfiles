@@ -1,5 +1,5 @@
 <p align="center">
-	<h1 align="center">Excalith Dotfiles</h1>
+	<h1 align="center">My Dotfiles</h1>
 </p>
 
 ![Screenshot of alacritty terminal using fish shell with spaceship prompt and tmux, displaying neofetch, nvim and custom scripts](assets/screenshots/dotfiles.png)
@@ -82,7 +82,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Restricted
 To install packages for WSL Ubuntu, run the following command on WSL terminal.
 
 ```bash
-bash -c "$(wget --no-cache -qO - https://raw.github.com/excalith/.dotfiles/main/scripts/setup.sh)"
+bash -c "$(wget --no-cache -qO - https://raw.github.com/jraebrown/.dotfiles/main/scripts/setup.sh)"
 ```
 
 ## Post-Installation
@@ -94,7 +94,7 @@ Optionally, if you want to set upstream with this repository, you can run the fo
 git init
 
 # Add this repository as remote
-git remote add origin git@github.com:excalith/.dotfiles.git
+git remote add origin git@github.com:jraebrown/.dotfiles.git
 
 # Fetch the main branch
 git fetch origin main
@@ -122,7 +122,7 @@ If you want to create your own dotfiles based on my configuration, you should
 
 ## Credits
 
-This dotfiles repository is a heavily ~~knocked-off~~ inspired version of beautiful [Cătălin’s dotfiles](https://github.com/alrra/dotfiles). You should probably check it out!
+This dotfiles repository is a fork of [exalth's dotfiles](https://github.com/excalith/.dotfiles) which was a (self-described) heavily ~~knocked-off~~ inspired version of beautiful [Cătălin’s dotfiles](https://github.com/alrra/dotfiles).
 
 I have modified this dotfiles with my own taste of config files and added a bunch of helpers and utilities to install packages, extensions etc. from different sources that I trust. I tried to seperate installation system and OS-spesific configurations as much as I can, so it would be easier to implement new OS setups which I might do later.
 
