@@ -1,6 +1,6 @@
-# Excalith Dotfiles Contributing Guide
+# jraebrown Dotfiles Contributing Guide
 
-Thank you for your interest in contributing to the Excalith dotfiles project! Please take a moment to read through this tiny guide before making any contributions.
+Thank you for your interest in contributing to the jraebrown dotfiles project! Please take a moment to read through this tiny guide before making any contributions.
 
 ## What Can I Contribute?
 
@@ -17,4 +17,4 @@ There are several ways to contribute:
 
 ## Who Maintains This Project?
 
-The project is maintained by [myself](https://github.com/excalith) and I regularly updates the repository with new configurations and changes.
+The project is maintained by [myself](https://github.com/jraebrown) and I regularly updates the repository with new configurations and changes.

@@ -1,4 +1,4 @@
-# Excalith Color Palette
+# jraebrown Color Palette
 
 # Specials
 set -l foreground d5d8da

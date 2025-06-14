@@ -25,4 +25,4 @@ Invoke-Script ".dotfiles\system\windows\setup_git_creds.ps1"
 Invoke-Script ".dotfiles\system\windows\setup_wsl.ps1"
 
 # Setup Complete
-Write-Host -ForegroundColor Green "Excalith Dotfiles Successfully Installed"
+Write-Host -ForegroundColor Green "jraebrown Dotfiles Successfully Installed"
