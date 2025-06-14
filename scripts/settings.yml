@@ -3,10 +3,10 @@
 # This file is not functional yet. Will be implemented later
 # ===============================================================
 repository:
-  name: excalith/.dotfiles
-  origin: git@github.com:excalith/.dotfiles.git
-  raw: https://raw.githubusercontent.com/excalith/.dotfiles/main/
+  name: jraebrown/.dotfiles
+  origin: git@github.com:jraebrown/.dotfiles.git
+  raw: https://raw.githubusercontent.com/jraebrown/.dotfiles/main/
 
 download:
-  tarball: https://github.com/excalith/.dotfiles/tarball/main
-  zip: https://github.com/excalith/.dotfiles/archive/main.zip
+  tarball: https://github.com/jraebrown/.dotfiles/tarball/main
+  zip: https://github.com/jraebrown/.dotfiles/archive/main.zip
