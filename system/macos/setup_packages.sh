@@ -48,7 +48,43 @@ print_title "Installing Brew Packages"
 brew_install "wget" "wget"
 brew_install "mas" "mas"
 brew_install "fd" "fd"
-brew_install "fasd" "fasd"
+
+#==================================
+# Brew Install "fasd" "fasd" not working
+# using this instead:
+# Preserve the current working directory
+CURRENT_DIR="$(pwd)"
+
+print_title "Installing fasd (manually)"
+
+# Clone fasd only if missing
+if [ ! -d "$HOME/.fasd" ]; then
+    git clone https://github.com/clvv/fasd.git "$HOME/.fasd"
+fi
+
+# Navigate to fasd directory without affecting the script's execution
+(  
+    cd "$HOME/.fasd" || exit 1
+    PREFIX="$HOME/.local" make install
+)
+
+# Restore the original working directory
+cd "$CURRENT_DIR"
+
+# Add fasd to shell environment without overwriting existing variables
+if ! grep -q "fasd --init auto" "$HOME/.zshrc"; then
+    echo 'eval "$(fasd --init auto)"' >> "$HOME/.zshrc"
+fi
+if ! grep -q "fasd --init auto" "$HOME/.bashrc"; then
+    echo 'eval "$(fasd --init auto)"' >> "$HOME/.bashrc"
+fi
+
+# Reload shell config (non-blocking)
+source "$HOME/.zshrc" || source "$HOME/.bashrc"
+
+print_result $? "Installed fasd"
+#==================================
+
 brew_install "fzf" "fzf"
 brew_install "dockutil" "dockutil"
 brew_install "git" "git"
