@@ -58,42 +58,42 @@ brew_install "git" "git-quick-stats"
 # Brew Install "fasd" "fasd" not working
 # using this instead:
 # Preserve the current working directory
-CURRENT_DIR="$(pwd)"
+#CURRENT_DIR="$(pwd)"
 
-print_title "Installing fasd (manually)"
+#print_title "Installing fasd (manually)"
 
-if ! command -v git &>/dev/null || ! command -v make &>/dev/null; then
-    echo "Error: git and make are required but not installed."
-    exit 1
-fi
+#if ! command -v git &>/dev/null || ! command -v make &>/dev/null; then
+#    echo "Error: git and make are required but not installed."
+#    exit 1
+#fi
 
 
 # Clone fasd only if missing
-if [ ! -d "$HOME/.fasd" ]; then
-    git clone https://github.com/clvv/fasd.git "$HOME/.fasd"
-fi
+#if [ ! -d "$HOME/.fasd" ]; then
+#    git clone https://github.com/clvv/fasd.git "$HOME/.fasd"
+#fi
 
 # Navigate to fasd directory without affecting the script's execution
-(  
-    cd "$HOME/.fasd" || exit 1
-    PREFIX="$HOME/.local" make install
-)
+#(  
+#    cd "$HOME/.fasd" || exit 1
+#   PREFIX="$HOME/.local" make install
+#)
 
 # Restore the original working directory
-cd "$CURRENT_DIR"
+#cd "$CURRENT_DIR"
 
 # Add fasd to shell environment without overwriting existing variables
-if ! grep -q "fasd --init auto" "$HOME/.zshrc"; then
-    echo 'eval "$(fasd --init auto)"' >> "$HOME/.zshrc"
-fi
-if ! grep -q "fasd --init auto" "$HOME/.bashrc"; then
-    echo 'eval "$(fasd --init auto)"' >> "$HOME/.bashrc"
-fi
+#if ! grep -q "fasd --init auto" "$HOME/.zshrc"; then
+#    echo 'eval "$(fasd --init auto)"' >> "$HOME/.zshrc"
+#fi
+#if ! grep -q "fasd --init auto" "$HOME/.bashrc"; then
+#    echo 'eval "$(fasd --init auto)"' >> "$HOME/.bashrc"
+#fi
 
 # Reload shell config (non-blocking)
-exec "$HOME/.zshrc" || exec "$HOME/.bashrc"
+#exec "$HOME/.zshrc" || exec "$HOME/.bashrc"
 
-print_result $? "Installed fasd"
+#print_result $? "Installed fasd"
 #==================================
 
 brew_install "fzf" "fzf"
