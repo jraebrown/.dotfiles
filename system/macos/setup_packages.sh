@@ -129,7 +129,7 @@ brew_install "midnight" "midnight-commander"
 brew_install "ffmpeg" "ffmpeg"
 brew_install "speedtest" "speedtest"
 brew_install "tldr" "tldr"
-#brew_install "spotify-tui" "spotify-tui"
+brew_install "spotify_player" "spotify_player"
 brew_install "no-more-secrets" "no-more-secrets"
 brew_install "yabai" "koekeishiya/formulae/yabai"
 
