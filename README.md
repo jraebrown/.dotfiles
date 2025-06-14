@@ -27,19 +27,19 @@ Depending on your OS, copy and paste the code to start installation. This code w
 ### MacOS 12.0 Monterey (and above)
 
 ```bash
-bash -c "$(curl -LsS https://raw.github.com/excalith/.dotfiles/main/scripts/setup.sh)"
+bash -c "$(curl -LsS https://raw.github.com/jraebrown/.dotfiles/main/scripts/setup.sh)"
 ```
 
 ### Ubuntu 22.04 Jammy Jellyfish (and above)
 
 ```bash
-bash -c "$(wget --no-cache -qO - https://raw.github.com/excalith/.dotfiles/main/scripts/setup.sh)"
+bash -c "$(wget --no-cache -qO - https://raw.github.com/jraebrown/.dotfiles/main/scripts/setup.sh)"
 ```
 
 ### Arch Linux
 
 ```bash
-bash -c "$(wget --no-cache -qO - https://raw.github.com/excalith/.dotfiles/main/scripts/setup.sh)"
+bash -c "$(wget --no-cache -qO - https://raw.github.com/jraebrown/.dotfiles/main/scripts/setup.sh)"
 ```
 
 ### Lite Version
@@ -47,7 +47,7 @@ bash -c "$(wget --no-cache -qO - https://raw.github.com/excalith/.dotfiles/main/
 This is a minimal installation for Termux app on Android.
 
 ```bash
-bash -c "$(curl -LsS https://raw.github.com/excalith/.dotfiles/main/system/lite/install.sh)"
+bash -c "$(curl -LsS https://raw.github.com/jraebrown/.dotfiles/main/system/lite/install.sh)"
 ```
 
 ### Windows (10 and above)
@@ -68,7 +68,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 Download the dotfiles and start setup
 
 ```ps
-Invoke-Expression (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/excalith/.dotfiles/main/scripts/setup.ps1').Content
+Invoke-Expression (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/jraebrown/.dotfiles/main/scripts/setup.ps1').Content
 ```
 
 Reset Execution Policy
