@@ -62,6 +62,12 @@ CURRENT_DIR="$(pwd)"
 
 print_title "Installing fasd (manually)"
 
+if ! command -v git &>/dev/null || ! command -v make &>/dev/null; then
+    echo "Error: git and make are required but not installed."
+    exit 1
+fi
+
+
 # Clone fasd only if missing
 if [ ! -d "$HOME/.fasd" ]; then
     git clone https://github.com/clvv/fasd.git "$HOME/.fasd"
